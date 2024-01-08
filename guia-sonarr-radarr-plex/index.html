@@ -1,0 +1,1496 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://c-pirataria.github.io/megathread/guia-sonarr-radarr-plex/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/grande.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Guia do Streaming Doméstico Automatizado (Sonarr, Radarr e Plex) - Pirataria</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="light-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-do-streaming-domestico-automatizado-sonarr-radarr-e-plex" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Pirataria" class="md-header__button md-logo" aria-label="Pirataria" data-md-component="logo">
+      
+  <img src="../assets/grande.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pirataria
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guia do Streaming Doméstico Automatizado (Sonarr, Radarr e Plex)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/c-pirataria/megathread" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    c-pirataria/megathread
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  Início
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../sites-geral/" class="md-tabs__link">
+        
+  
+    
+  
+  Sites de Uso Geral
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../jogos/" class="md-tabs__link">
+        
+  
+    
+  
+  Jogos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../anime/" class="md-tabs__link">
+        
+  
+    
+  
+  Anime
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../musica/" class="md-tabs__link">
+        
+  
+    
+  
+  Música
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../educacional/" class="md-tabs__link">
+        
+  
+    
+  
+  Educacional
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../livros/" class="md-tabs__link">
+        
+  
+    
+  
+  Livros
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../emuladores-e-roms/" class="md-tabs__link">
+        
+  
+    
+  
+  Emuladores/ROMs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../esportes/" class="md-tabs__link">
+        
+  
+    
+  
+  Esportes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../filmes-e-tv/" class="md-tabs__link">
+        
+  
+    
+  
+  Filmes/TV
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../mobile/" class="md-tabs__link">
+        
+  
+    
+  
+  Mobile
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ferramentas/" class="md-tabs__link">
+        
+  
+    
+  
+  Ferramentas
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../softwares/" class="md-tabs__link">
+        
+  
+    
+  
+  Softwares
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guias/" class="md-tabs__link">
+        
+  
+    
+  
+  Guias
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Pirataria" class="md-nav__button md-logo" aria-label="Pirataria" data-md-component="logo">
+      
+  <img src="../assets/grande.png" alt="logo">
+
+    </a>
+    Pirataria
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/c-pirataria/megathread" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    c-pirataria/megathread
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Início
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Início
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📜 ➜ Bem-vindo a Megathread do c/Pirataria
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🪶 ➜ FAQ (Perguntas frequentes)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🪶 ➜ Glossário dos Piratas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dicionario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🪶 ➜ Dicionário dos Piratas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sites-geral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sites de Uso Geral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jogos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jogos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anime
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../musica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Música
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../educacional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Educacional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../livros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Livros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emuladores-e-roms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emuladores/ROMs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../esportes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Esportes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filmes-e-tv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filmes/TV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mobile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ferramentas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ferramentas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../softwares/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Softwares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="guia-do-streaming-domestico-automatizado-sonarr-radarr-e-plex">Guia do Streaming Doméstico Automatizado (Sonarr, Radarr e Plex)</h1>
+<p>Desde o início da pandemia, eu venho montando e aperfeiçoando constantemente um servidor de mídias automatizado que é a minha fonte principal de quase todos os filmes e séries que eu assisto atualmente. Todos os programas necessários para montar esse serviço são de certa forma bastante conhecidos no meio, mas notei que o sub carece de um guia direcionado ao streaming doméstico, então vou ajudar a popularizá-los ainda mais. O computador que eu utilizo é um Dell de mais de 10 anos atrás que já era lento para aquela época, então imagino que esse tutorial vai ser acessível para a maioria.</p>
+<p>Antes de iniciar, vou fazer um breve resumo e explicação de como funciona cada um dos softwares que vamos utilizar.</p>
+<p><strong>qBitTorrent</strong> - Um dos mais famosos clients de torrents do mundo, ele vai ser o meio para baixarmos as nossas mídias. Os programas Radarr e Sonarr vão entrar em contato com ele e enviar o magnet link do filme que você deseja automaticamente. Após a conclusão, o torrent também será apagado automaticamente.</p>
+<p><strong>Radarr</strong> - Gerenciador dos filmes desejados. Após adicionados pelo usuário ao radarr, os filmes serão constantemente procurados nos mais diversos sites e terão o melhor release possível enviado ao client de torrent, nesse caso, o qbittorrent.</p>
+<p><strong>Sonarr</strong> - Mesma coisa que o Radarr, mas para séries.</p>
+<p><strong>Prowlarr</strong> - Indexador das fontes de torrent. É através dele que o radarr e o sonarr entrarão em contato com os sites e grupos de lançamentos que disponibilizam torrents. Através do Prowlarr, também é possível baixar outros arquivos disponíveis nos indexadores além de filmes e séries.</p>
+<p><strong>Bazarr</strong> - Software que acompanha o Radarr e o Sonarr para o download de legendas. Da mesma forma que eles, procura constantemente a melhor legenda disponível nos sites que você cadastrou.</p>
+<p><strong>Plex</strong> - A ponta, onde você vai assistir seus filmes e séries. Ele lê o nome do arquivo do vídeo e rapidamente cataloga o filme/série em uma biblioteca com todas as suas mídias. Assim, você pode acessá-la facilmente domesticamente ou remotamente através dos diversos dispositivos que o Plex tem aplicativo. O Plex tem versão paga, mas acho desnecessário, nunca paguei e nunca fez falta. Existem alternativas código aberto ao Plex (Jellyfin), mas que, na minha opinião, estão muito aquém em termos de perfomance.</p>
+<p><strong>Letterboxd</strong> - Site e aplicativo no qual você pode logar, fazer review de filmes, listas, comentar, ver review de amigos, etc. Hoje, estaremos utilizando a função de listas do Letterboxd para integrá-lo ao Radarr e automatizá-lo ainda mais.</p>
+<p><strong>Opensubtitles</strong> - Site que disponibiliza legendas nos mais diversos idiomas.</p>
+<p><strong>Estarei pulando o tutorial de instalação desses programas, mas todos eles são facilmente obtidos pesquisando "Nome do programa + download" no Google</strong></p>
+<p><strong>Sumário</strong></p>
+<ol>
+<li>
+<p>Requisitos Recomendados</p>
+</li>
+<li>
+<p>qBitTorrent - Configurações</p>
+</li>
+<li>
+<p>Radarr - Configurações</p>
+</li>
+<li>
+<p>Sonarr - Configurações</p>
+</li>
+<li>
+<p>Prowlarr - Configurações</p>
+</li>
+<li>
+<p>Bazarr - Configurações</p>
+</li>
+<li>
+<p>Plex - Configurações</p>
+</li>
+</ol>
+<h2 id="1-requisitos-recomendados">1. REQUISITOS RECOMENDADOS</h2>
+<ul>
+<li>
+<p>Qualquer PC de batata vai rodar isso</p>
+</li>
+<li>
+<p>1TB de armazenamento mínimo (vai de acordo com a biblioteca que você deseja montar)</p>
+</li>
+<li>
+<p>Internet cabeada</p>
+</li>
+</ul>
+<h2 id="2-qbittorrent-configuracoes">2. QBITTORRENT - CONFIGURAÇÕES</h2>
+<p>(A maioria dos clients de torrent funciona no Radarr e no Sonarr, mas o qbittorrent foi o que mais se adequou ao meu uso e nunca deu problema).</p>
+<p>Primeiramente, crie três pastas em seu computador</p>
+<ol>
+<li>
+<p>qBitTorrent - onde seus filmes serão baixados</p>
+</li>
+<li>
+<p>Filmes - para onde o Radarr moverá os arquivos de filmes após a conclusão do download</p>
+</li>
+<li>
+<p>Séries - para onde o Sonarr moverá os arquivos de séries após a conclusão do download</p>
+</li>
+</ol>
+<p><a class="glightbox" href="https://telegra.ph/file/fa6f193bf2a0ce30a71b8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pastas" src="https://telegra.ph/file/fa6f193bf2a0ce30a71b8.png" /></a></p>
+<blockquote>
+<p>Agora, no programa qbittorrentt, copie as seguintes configurações:</p>
+</blockquote>
+<h3 id="preferencias-download">Preferências -&gt; Download</h3>
+<p><a class="glightbox" href="https://telegra.ph/file/da864f1571e7b3e9ef65a.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Preferencias de download" src="https://telegra.ph/file/da864f1571e7b3e9ef65a.png" /></a></p>
+<p>Pré-aloque o espaço em disco para evitar que seja baixado um filme sem que haja espaço no armazenamento. Lembre-se que tudo isso será automático e que a ideia é que você não fique monitorando.</p>
+<p>É <strong>MUITO</strong> importante que o modo de gerenciamento padrão dos torrents esteja em automático. Nada vai funcionar se não estiver.</p>
+<p><a class="glightbox" href="https://telegra.ph/file/b439955f3559c54557161.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://telegra.ph/file/b439955f3559c54557161.png" /></a></p>
+<p>Agora, no camino padrão do salvamento, seleciona a pasta <strong>qbittorrent</strong>, que você criou agora há pouco.</p>
+<h3 id="preferencias-interface-de-usuario">Preferências -&gt; Interface de Usuário</h3>
+<p>Habilite a interface de usuário web e coloque um usuário e senha de sua preferência. Para acessar a interface, o endereço padrão é http://localhost:8080 ou http://(seu_ip):8080</p>
+<p><strong>As demais configurações do qBitTorrent vão da sua preferência</strong></p>
+<h2 id="3-radarr-configuracoes">3. RADARR - CONFIGURAÇÕES</h2>
+<p>Após instalar o radarr, acesse-o através de http://localhost:7878 ou http://(seu_ip):7878</p>
+<p><a class="glightbox" href="https://telegra.ph/file/ec36ca31723fd193414ef.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Interface do radarr" src="https://telegra.ph/file/ec36ca31723fd193414ef.png" /></a></p>
+<p>Clique no <strong>Settings -&gt; IU</strong> e desça toda a página para trocá-la para Portuguese (Brazil). Salve e recarregue a página</p>
+<p>Clique em <strong>Configurações -&gt; Gerenciamento de Mídia</strong></p>
+<h3 id="nomenclatura-de-filme"><strong>NOMENCLATURA DE FILME</strong></h3>
+<p><a class="glightbox" href="https://telegra.ph/file/ddc5ceaf5ab3dbc1d20d8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Nomeclatura do filme" src="https://telegra.ph/file/ddc5ceaf5ab3dbc1d20d8.png" /></a></p>
+<p><strong>Marque</strong> renomear filmes e substituir caracteres ilegais</p>
+<p>Substituto para dois pontos: Excluir</p>
+<p><strong>Formato de filme padrão:</strong> Copie e cole:</p>
+<p><div class="highlight"><pre><span></span><code>{Movie CleanTitle} {(Release Year)} {imdb-{ImdbId}} {edition-{Edition Tags}} {[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels]}[{Mediainfo VideoCodec}]{-Release Group}
+</code></pre></div>
+Assim, o Radarr renomeará o arquivo do filme para um no qual o Plex saberá todas as informações sobre ele logo de cara e o catalogará corretamente, não sendo necessário nenhum trabalho manual.</p>
+<p><strong>Formato de pasta de filme padrão:</strong></p>
+<div class="highlight"><pre><span></span><code>{Movie CleanTitle} ({Release Year}) {imdb-{ImdbId}}
+</code></pre></div>
+<p><strong>Pastas</strong></p>
+<p><a class="glightbox" href="https://telegra.ph/file/29e3152cea792513c4306.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="pastas" src="https://telegra.ph/file/29e3152cea792513c4306.png" /></a></p>
+<blockquote>
+<p><strong>Importando</strong></p>
+</blockquote>
+<p><strong>Marque</strong> Ignorar verificação de espaço livre</p>
+<p>Isso permitirá que o Radarr importe (processo de mover o arquivo da pasta qBitTorrent para a pasta Filmes) sem que haja espaço livre disponível.</p>
+<p><strong>Marque</strong> Usar links rigidos ao invés de copiar</p>
+<p><a class="glightbox" href="https://telegra.ph/file/be2ae7caff1c214715f57.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://telegra.ph/file/be2ae7caff1c214715f57.png" /></a></p>
+<h3 id="gerenciamento-de-arquivo"><strong>Gerenciamento de Arquivo</strong></h3>
+<p>Propers e Repacks <strong>Não Preferir</strong></p>
+<p>Isso evitará que o Radarr dê preferência a releases PROPER ou REPACK acima das prioridades que você vai estabelecer nas demas configurações.</p>
+<p>Deixe o restante como está e informe o local da lixeira do seu computador. Isso é importante porque os torrents de filmes às vezes vêm com arquivos adicionais que, acumulando, podem consumir muito espaço do armazenamento. O radarr importa o filme para a pasta Filmes e envia esses arquivos adicionais para a lixeira. O próprio radarr esvaziará a lixeira no tempo que você definir.</p>
+<ul>
+<li><strong>Permissões</strong></li>
+</ul>
+<p>Deixe como está</p>
+<p>Agora, adicione a pasta Filmes que você criou anteriormente.</p>
+<p><strong>Salve.</strong></p>
+<h3 id="configuracoes-qualidade"><strong>CONFIGURAÇÕES -&gt; QUALIDADE</strong></h3>
+<p><a class="glightbox" href="https://telegra.ph/file/5e5191a08993c0694ba6f.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://telegra.ph/file/5e5191a08993c0694ba6f.png" /></a></p>
+<p>Basicamente, aqui você vai definir o tamanho mínimo e máximo de arquivo que você deseja que seja baixado, de acordo com o perfil de qualidade. O Radarr não baixará os tamanhos que não se enquadrarem na sua escolha. Vai de preferência pessoal.</p>
+<h3 id="configuracoes-formatos-personalizados">CONFIGURAÇÕES - FORMATOS PERSONALIZADOS</h3>
+<p>Nativamente, as configurações do Radarr dão preferência à qualidade acima de tudo. Entretanto, há uma forma de evitar que o Radarr baixe qualquer coisa que vai ser muito pesada pra rodar no Plex ou simplesmente não é de seu interesse pessoal. Essa forma são os formatos personalizados.</p>
+<p>Você vai clicar no + e em <strong>Importar</strong>, no canto inferior esquerdo</p>
+<p>Vou informar aqui os formatos personalizados básicos pra você evitar releases indesejados, cada um desses você repete o processo de importar:</p>
+<p><strong>BR-DISK</strong></p>
+<p>Evita que o Radarr obtenha releases de qualidade BR-DISK. São muito pesados e vêm em arquivo ISO. O Plex nem roda.</p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;trash_id&quot;: &quot;ed38b889b31be83fda192888e2286d83&quot;,
+  &quot;trash_scores&quot;: {
+    &quot;default&quot;: -10000
+  },
+  &quot;trash_regex&quot;: &quot;https://regex101.com/r/UpA3I7/2&quot;,
+  &quot;name&quot;: &quot;BR-DISK&quot;,
+  &quot;includeCustomFormatWhenRenaming&quot;: false,
+  &quot;specifications&quot;: [
+    {
+      &quot;name&quot;: &quot;BR-DISK&quot;,
+      &quot;implementation&quot;: &quot;ReleaseTitleSpecification&quot;,
+      &quot;negate&quot;: false,
+      &quot;required&quot;: true,
+      &quot;fields&quot;: {
+        &quot;value&quot;: &quot;^(?!.*\\b((?&lt;!HD[._ -]|HD)DVD|BDRip|720p|MKV|XviD|WMV|d3g|(BD)?REMUX|^(?=.*1080p)(?=.*HEVC)|[xh][-_. ]?26[45]|German.*[DM]L|((?&lt;=\\d{4}).*German.*([DM]L)?)(?=.*\\b(AVC|HEVC|VC[-_. ]?1|MVC|MPEG[-_. ]?2)\\b))\\b)(((?=.*\\b(Blu[-_. ]?ray|BD|HD[-_. ]?DVD)\\b)(?=.*\\b(AVC|HEVC|VC[-_. ]?1|MVC|MPEG[-_. ]?2|BDMV|ISO)\\b))|^((?=.*\\b(((?=.*\\b((.*_)?COMPLETE.*|Dis[ck])\\b)(?=.*(Blu[-_. ]?ray|HD[-_. ]?DVD)))|3D[-_. ]?BD|BR[-_. ]?DISK|Full[-_. ]?Blu[-_. ]?ray|^((?=.*((BD|UHD)[-_. ]?(25|50|66|100|ISO)))))))).*&quot;
+      }
+    }
+  ]
+}
+</code></pre></div>
+<blockquote>
+<p><strong>3D</strong></p>
+</blockquote>
+<p>Evita que o Radarr obtenha releases em 3D</p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;trash_id&quot;: &quot;b8cd450cbfa689c0259a01d9e29ba3d6&quot;,
+  &quot;trash_scores&quot;: {
+    &quot;default&quot;: -10000
+  },
+  &quot;name&quot;: &quot;3D&quot;,
+  &quot;includeCustomFormatWhenRenaming&quot;: false,
+  &quot;specifications&quot;: [
+    {
+      &quot;name&quot;: &quot;3D&quot;,
+      &quot;implementation&quot;: &quot;ReleaseTitleSpecification&quot;,
+      &quot;negate&quot;: false,
+      &quot;required&quot;: false,
+      &quot;fields&quot;: {
+        &quot;value&quot;: &quot;\\b(3d|sbs|half[ .-]ou|half[ .-]sbs)\\b&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;BluRay3D&quot;,
+      &quot;implementation&quot;: &quot;ReleaseTitleSpecification&quot;,
+      &quot;negate&quot;: false,
+      &quot;required&quot;: false,
+      &quot;fields&quot;: {
+        &quot;value&quot;: &quot;\\b(BluRay3D)\\b&quot;
+      }
+    }
+  ]
+}
+</code></pre></div>
+<p>Existe a possibilidade de você adicionar, também, um fomato personalizado para um tipo de release que você tem preferência, exemplo:</p>
+<h3 id="open-matte"><strong>Open Matte</strong></h3>
+<p>O Radarr vai obter, sempre que disponível, um release Open Matte com preferência maior que os outros.</p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;trash_id&quot;: &quot;09d9dd29a0fc958f9796e65c2a8864b4&quot;,
+  &quot;trash_scores&quot;: {
+    &quot;default&quot;: 25
+  },
+  &quot;name&quot;: &quot;Open Matte&quot;,
+  &quot;includeCustomFormatWhenRenaming&quot;: false,
+  &quot;specifications&quot;: [
+    {
+      &quot;name&quot;: &quot;Open Matte&quot;,
+      &quot;implementation&quot;: &quot;ReleaseTitleSpecification&quot;,
+      &quot;negate&quot;: false,
+      &quot;required&quot;: false,
+      &quot;fields&quot;: {
+        &quot;value&quot;: &quot;\\b(Open[ ._-]?Matte)\\b&quot;
+      }
+    }
+  ]
+}
+</code></pre></div>
+<p>Note que, para os formatos personalizados que você tem preferência, o Radarr irá dar prioridade a eles, mas não quer dizer que, se não houver um Open Matte disponível, ele não irá baixar os outros que tem.</p>
+<p>Existem entusiastas na Internet que disponibilizam fomatos personalizados para importar de basicamente todo formato de filme possível, procurem por trash guides</p>
+<p>Fonte dos formatos personalizados: Trash-Guides</p>
+<h3 id="ordem-de-preferencia-do-radarr-para-pegar-um-release"><strong>Ordem de preferência do Radarr para pegar um release:</strong></h3>
+<p>1.Qualidade</p>
+<p>2.Pontuação do Formato Personalizado</p>
+<p>3.Protocolo</p>
+<p>4.Prioridade do Indexador</p>
+<p>5.Bandeiras do Indexador</p>
+<p>6.Seeds/Peers</p>
+<p>7.Tamanho</p>
+<p><strong>Salve.</strong></p>
+<h3 id="configuracoes-perfis"><strong>CONFIGURAÇÕES -&gt; PERFIS</strong></h3>
+<p>Aqui, você definirá as qualidades dos releases que o Radarr irá selecionar para você baixar. Eu <strong>recomendo</strong> você escolher o <strong>Any, marcar tudo, permitir atualizações</strong> e selecionar até qual qualidade que você quer que o Radarr atualize seu filme.</p>
+<p>Por exemplo: você botou o Radarr para baixar Taylor Swift The Eras Tour (2023). Atualmente, não há nenhum release em HD desse filme, apenas gravações do cinema. Não tem problema, se você permitir, o Radarr baixará a gravação de cinema e <strong>continuará</strong> procurando um release melhor. Quando sair, ele baixará a versão em HD e excluirá automaticamente a versão anterior. Esse proceso continuará até chegar no limite que estabeleci, nesse caso, Bluray-1080p.</p>
+<ul>
+<li>
+<p>Idioma: Original</p>
+</li>
+<li>
+<p>Pontuação Mínima de Formato Personalizado: 0</p>
+</li>
+<li>
+<p>Atualizar até pontuação de formato personalizado: 0</p>
+</li>
+</ul>
+<h3 id="formato-personalizado"><strong>Formato Personalizado</strong></h3>
+<p>Agora, estabeleça pontuações para os formatos Personalizados que adicionou anteriormente. Para os indesejados, abaixo de 0. O Radarr não baixará nenhum arquivo com pontuação abaixo de 0. Para os mais desejados, 10.</p>
+<div class="highlight"><pre><span></span><code>Open Matte 10
+3D -10000
+BR-DISK -10000
+</code></pre></div>
+<p><strong>Salve.</strong></p>
+<h3 id="configuracoes-indexadores"><strong>CONFIGURAÇÕES -&gt; INDEXADORES</strong></h3>
+<p>Retornaremos aqui depois de configurarmos o Prowlarr</p>
+<h4 id="configuracoes-clientes-de-download"><strong>CONFIGURAÇÕES -&gt; CLIENTES DE DOWNLOAD</strong></h4>
+<p>Clique no + e adicione o qBitTorrent ou o client da sua preferência. Normalmente, as configurações padrão vão servir. Lá embaixo, marque remover downloads importados do histórico do cliente de <strong>download</strong>.</p>
+<p>Marque tudo e deixe 1 minuto</p>
+<p><strong>Salve.</strong></p>
+<p>#### <strong>CONFIGURAÇÕES -&gt; LISTAS (OPCIONAL)</strong></p>
+<p>Aqui, <strong>caso queira</strong>, é onde vai acontecer a adição e remoção de filmes. Tem forma de fazer isso com inúmeros sites. Nesse guia, vou ensinar a fazer com o <strong>Letterboxd</strong>.</p>
+<p>Após criar a conta no Letterboxd, você vai procurar uma lista qualquer ou criar a sua própria. Como exemplo, vou utilizar a lista abaixo:</p>
+<p><a class="glightbox" href="https://telegra.ph/file/43f6a86795236a10efd35.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://telegra.ph/file/43f6a86795236a10efd35.png" /></a></p>
+<p>Você vai copiar o url da lista e substituir o <strong>letterboxd.com</strong> por</p>
+<div class="highlight"><pre><span></span><code>letterboxd-list-radarr.onrender.com
+</code></pre></div>
+<p>Isso irá gerar uma lista RSS que será lida pelo Radarr. Resultado:</p>
+<p><a class="glightbox" href="https://telegra.ph/file/6ebfc7e736c02f83506a5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://telegra.ph/file/6ebfc7e736c02f83506a5.png" /></a></p>
+<p>Funciona com filmografias, listas, watchlists etc.</p>
+<p><strong>Recomendo</strong> a criação de uma lista própria para que você tenha controle do que é adicionado ou retirado.</p>
+<p>Clique em +, desça tudo até Advanced Lists e clique em Custom Lists</p>
+<p><a class="glightbox" href="https://telegra.ph/file/aa60938827a9f8d127682.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://telegra.ph/file/aa60938827a9f8d127682.png" /></a></p>
+<ul>
+<li>
+<p>Marque Habilitar, Habilitar adição automática, Monitorar - Somente Filme, Pesquisar ao Adicionar, Disponibilidado Mínima - Anunciado</p>
+</li>
+<li>
+<p>Pasta Raiz - Filmes</p>
+</li>
+<li>
+<p>List URL - O que você acabou de criar</p>
+</li>
+</ul>
+<p>Teste, e, se der certo, salve.</p>
+<blockquote>
+<p><strong>OPÇÕES</strong></p>
+</blockquote>
+<p><strong>Limpar Nível da Biblioteca - Remover Filme e Excluir Arquivos</strong></p>
+<p>Toda vez que você tirar um filme da lista, esse filme será apagado do sistema. Útil para quem tem menos espaço no armazamento. Desabilite se não for do seu desejo.</p>
+<p>O Radarr atualizará a lista a cada 12 horas.</p>
+<p><strong>Salve.</strong></p>
+<ul>
+<li><strong>CONFIGURAÇÕES -&gt; GERAL</strong></li>
+</ul>
+<p>Deixe tudo como está e desça até atualizações se desejar atualizações automáticas</p>
+<ul>
+<li>
+<p>Ramificação - master</p>
+</li>
+<li>
+<p>Automático - Marque</p>
+</li>
+<li>
+<p>Mecanismo - Embutido</p>
+</li>
+</ul>
+<p><strong>Salve.</strong></p>
+<blockquote>
+<p><strong>QUERO ADICIONAR UM FILME</strong></p>
+</blockquote>
+<p><a class="glightbox" href="https://telegra.ph/file/ea74e1f30a17074c11620.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://telegra.ph/file/ea74e1f30a17074c11620.png" /></a></p>
+<p>Clique em <strong>Filmes -&gt; Adicionar Novo</strong> e digite o nome do filme. Selecione Monitorar - <strong>Somente Filme</strong>, Disponibilidade Mínima <strong>Anunciado</strong>, o Perfil de Qualidade da sua preferência e marque <strong>Iniciar a pesquisa pelo filme ausente.</strong></p>
+<blockquote>
+<p><strong>QUERO IMPORTAR FILMES QUE JÁ TENHO BAIXADO</strong></p>
+</blockquote>
+<p>Mova-os para a pasta <strong>Filmes</strong> recentemente criada e clique em <strong>Importar Biblioteca</strong></p>
+<h2 id="4-sonarr-configuracoes"><strong>4. SONARR - CONFIGURAÇÕES</strong></h2>
+<p>Após instalar o Sonarr, acesse-o via http://localhost:8989 ou http:/(seu_ip):8989</p>
+<p>Você se deparará com a seguinte tela:</p>
+<p><a class="glightbox" href="https://telegra.ph/file/16d9f21d1b2b05b90ad30.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://telegra.ph/file/16d9f21d1b2b05b90ad30.png" /></a></p>
+<p>O Sonarr tem configurações mais simples que o Radarr, então vamos lá.</p>
+<blockquote>
+<p><strong>SETTINGS -&gt; MEDIA MANAGEMENT</strong></p>
+</blockquote>
+<p><a class="glightbox" href="https://telegra.ph/file/137e0cd1976153ed4a87b.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://telegra.ph/file/137e0cd1976153ed4a87b.png" /></a></p>
+<ul>
+<li><strong>EPISODE NAMING</strong></li>
+</ul>
+<p>Marque de forma similar ao Radarr e copie os seguinte formato de renomeação de arquivo:</p>
+<h3 id="standard-episode-format">Standard Episode Format</h3>
+<blockquote>
+<p>{Series TitleYear} - S{season:00}E{episode:00} - {Episode CleanTitle} [{Preferred Words }{Quality Full}]{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels]}{[MediaInfo VideoCodec]}{-Release Group}</p>
+</blockquote>
+<h3 id="daily-episode-format">Daily Episode Format</h3>
+<blockquote>
+<p>{Series TitleYear} - {Air-Date} - {Episode CleanTitle} [{Preferred Words }{Quality Full}]{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels]}{[MediaInfo VideoCodec]}{-Release Group}</p>
+</blockquote>
+<h3 id="anime-episode-format">Anime Episode Format</h3>
+<blockquote>
+<p>{Series TitleYear} - S{season:00}E{episode:00} - {absolute:000} - {Episode CleanTitle} [{Preferred Words }{Quality Full}]{[MediaInfo VideoDynamicRangeType]}[{MediaInfo VideoBitDepth}bit]{[MediaInfo VideoCodec]}[{Mediainfo AudioCodec} { Mediainfo AudioChannels}]{MediaInfo AudioLanguages}{-Release Group}</p>
+</blockquote>
+<h3 id="series-folder-format">Series Folder Format</h3>
+<blockquote>
+<p>{Series TitleYear} {imdb-{ImdbId}}</p>
+</blockquote>
+<p>Deixe o restante como está e desça até Root Folders</p>
+<p>Adicione a pasta Séries, que você criou anteriormente.</p>
+<p><strong>Salve.</strong></p>
+<blockquote>
+<p><strong>SETTINGS -&gt; PROFILES</strong></p>
+</blockquote>
+<p>De forma similar ao Radarr, selecione um perfil de qualidade e marque as qualidades de seu desejo.</p>
+<blockquote>
+<p><strong>Language Profiles</strong></p>
+</blockquote>
+<p>Forma similar de lidar com as qualidades só que agora com idiomas. Marque os idiomas que deseja e até quais quer que o Sonarr atualize.</p>
+<p>Salve.</p>
+<blockquote>
+<p><strong>SETTINGS -&gt; QUALITY</strong></p>
+</blockquote>
+<p>Mesma coisa do Radarr</p>
+<blockquote>
+<p><strong>SETTINGS -&gt; INDEXERS</strong></p>
+</blockquote>
+<p>Voltaremos aqui quando configurarmos o Prowlarr</p>
+<blockquote>
+<p><strong>SETTINGS -&gt; DOWNLOAD CLIENTS</strong></p>
+</blockquote>
+<p>Faça literalmente a mesma coisa que fez no Radarr</p>
+<p><strong>Salve.</strong></p>
+<blockquote>
+<p><strong>SETTINGS -&gt; GENERAL</strong></p>
+</blockquote>
+<ul>
+<li>
+<p>Deixe tudo como está e desça até Updates caso deseje que o programa atualize automaticamente</p>
+</li>
+<li>
+<p>Branch main</p>
+</li>
+<li>
+<p>Automatic marque</p>
+</li>
+</ul>
+<p><strong>Salve.</strong></p>
+<h3 id="quero-adicionar-uma-serie">QUERO ADICIONAR UMA SÉRIE</h3>
+<p><a class="glightbox" href="https://telegra.ph/file/2aa296c83a11423f92116.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://telegra.ph/file/2aa296c83a11423f92116.png" /></a></p>
+<p>Para adicionar uma série, clique em <strong>Series -&gt; Add New</strong> e digite a serie. Selecione os episódios que deseja baixar, o perfil de qualidade, o tipo da série e marque embaixo <strong>Start sarching for missing episodes</strong></p>
+<h3 id="quero-importar-series-que-ja-tenho-baixadas">QUERO IMPORTAR SÉRIES QUE JÁ TENHO BAIXADAS</h3>
+<p>Mova-os para a pasta Séries recentemente criada e clique em <strong>Library Import.</strong></p>
+<h2 id="5-prowlarr-configuracoes">5. PROWLARR - CONFIGURAÇÕES</h2>
+<p>Após instalar o Prowlarr, o acesse através de http://localhost:9696 ou http://(seu_ip):9696.</p>
+<p>Esse é bemmmm mais simples. Aqui você vai adicionar os indexadores para finalmente botar o Radarr e o Sonarr para funcionar</p>
+<p>Vá para <strong>Settings -&gt; IU</strong> e desça tudo para trocar o idioma para <strong>Portuguese (Brazil)</strong>. Salve e recarregue a página.</p>
+<h3 id="configuracoes-aplicativos">CONFIGURAÇÕES -&gt; APLICATIVOS</h3>
+<p><a class="glightbox" href="https://telegra.ph/file/62ebefb962753bd53e1d3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://telegra.ph/file/62ebefb962753bd53e1d3.png" /></a></p>
+<p>Clique no +, selecione Radarr, deixe tudo como está e, na caixa <strong>API Key</strong>, você deverá retornar ao <a href="http://localhost:7878/settings/general">Radarr</a>, ir para <strong>Configurações -&gt; Geral</strong>, descer um pouco até <strong>Chave da API</strong>, copiar a chave, retornar ao <strong>Prowlarr</strong> e colá-la na caixa <strong>API Key</strong>. Teste e Salve.</p>
+<p>Clique no + novamente, selecione Sonarr, deixe tudo como está e, na caixa <strong>API Key</strong>, você deverá retornar ao <a href="http://localhost:8989/settings/general">Sonarr</a>, ir para <strong>Settings -&gt; General</strong>, descer um pouco até <strong>API Key</strong>, copiar a chave, retornar ao Prowlarr e colá-la na caixa <strong>API Key</strong>. Teste e Salve.</p>
+<h3 id="indexadores">INDEXADORES</h3>
+<p><a class="glightbox" href="https://telegra.ph/file/da0c18b9b170bd7daaa8e.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://telegra.ph/file/da0c18b9b170bd7daaa8e.png" /></a></p>
+<p>Clique em <strong>Adicionar Indexador</strong>, filtre por idioma, categoria e privacidade e vá adicionando tudo que for do seu interesse. Observe que esses indexadores serão as <strong>fontes</strong> de tudo que será baixado no Radarr e Sonarr. O que EU fiz foi filtrar por Privacidade <strong>Público</strong> e Categorias <strong>Movies</strong> e <strong>TV</strong> e adicionei literalmente todos os indexadores da lista, mas vocês fazem o que for da preferêcia de vocês.</p>
+<p>Quando terminarem de adicionar todos os indexadores desejados, salvem e apertem em Sincronizar <strong>indexadores do aplcativo</strong>. Isso adicionará os indexadores ao Radarr e ao Sonarr automaticamente.</p>
+<p>Agora, se lembram das configurações de Indexadores do Radarr e do Sonarr que deixamos pra depois? Essa é a hora de finalizar. Apenas retornem para aquela página de configuração em ambos os programas e observem se os indexadores foram sincronizados, se não foram, aguarde um tempinho ou observe se a API Key estava correta. Se foram sincronizados, pode fechar.</p>
+<h2 id="6-bazarr-configuracoes">6. BAZARR - CONFIGURAÇÕES</h2>
+<p>Agora que o download automático de filmes e séries já está concluído, é hora de configurar o download automático das legendas! Para iniciar, crie uma conta no site opensubtitles ponto com</p>
+<p>Após instalar o bazarr, acesse-o em http://localhost:6767 ou http://(seu_ip):6767</p>
+<h3 id="settings-sonarr">SETTINGS -&gt; SONARR</h3>
+<p><strong>Use Sonarr =&gt; Enabled</strong></p>
+<p>Deixe tudo como está, cole a <strong>API Key</strong> do <strong>Sonarr</strong> que você copiou antes (está em <strong>Settings -&gt; General do Sonarr</strong>) e teste. Se der certo, salve.</p>
+<h3 id="settings-radarr">SETTINGS -&gt; RADARR</h3>
+<p><strong>Use Radarr =&gt; Enabled</strong></p>
+<p>Deixe tudo como está, cole a <strong>API Key</strong> do <strong>Radarr</strong> que você copiou antes (está em <strong>Configurações -&gt; Geral do Radarr</strong>) e teste. Se der certo, salve.</p>
+<h3 id="settings-language">SETTINGS -&gt; LANGUAGE</h3>
+<p><a class="glightbox" href="https://telegra.ph/file/b557d234186f8bcbbf692.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://telegra.ph/file/b557d234186f8bcbbf692.png" /></a></p>
+<p>qui, você vai adicionar o idioma que vocẽ deseja que sejam baixadas as legendas. Vou dar exemplo pra PT-BR mas vocês podem fazer em qualquer idioma.</p>
+<p>Em <strong>Languages Filter</strong>, coloquem <strong>Brazilian portuguese</strong></p>
+<ul>
+<li>
+<p>Cliquem em <strong>Add New Profile</strong> e em <strong>Name</strong> escrevam <strong>Português</strong></p>
+</li>
+<li>
+<p>Cliquem em <strong>Add Language</strong> e <strong>Salvem</strong>.</p>
+</li>
+<li>
+<p><strong>Default Settings</strong></p>
+</li>
+<li>
+<p><strong>Habilitem Series</strong></p>
+</li>
+<li>
+<p>Em <strong>Profile</strong> selecionem Português</p>
+</li>
+<li>
+<p><strong>Habilitem Movies</strong></p>
+</li>
+<li>
+<p>Em <strong>Profile</strong> selecionem <strong>Português</strong></p>
+</li>
+</ul>
+<h3 id="settings-subtitles">SETTINGS =&gt; SUBTITLES</h3>
+<p>Aqui, você vai selecionar as configurações da legenda.</p>
+<p><strong>Alongside Media File</strong> - Arquivo da legenda vai ficar na pasta do arquivo</p>
+<p><strong>Upgrade Previously Downloaded Subtitles</strong> - O Bazarr vai fazer upgrade da legenda se surgir outra melhor.</p>
+<p>Deixe o restante como estáou altere de acordo com sua preferência e desça tudo para marcar <strong>Automatic Subtitle Synchronization</strong>. Isso irá sincronizar a legenda automaticamente com o filme. E funciona em 99% das legendas. Isso é mágica.</p>
+<p><strong>Salve.</strong></p>
+<h3 id="settings-providers">SETTINGS =&gt; PROVIDERS</h3>
+<p>Clique no + e selecione opensubtitles ponto com (o ponto org morreu) e coloque os dados da sua conta. <strong>Salve</strong></p>
+<h2 id="7-plex-configuracoes">7. PLEX - CONFIGURAÇÕES</h2>
+<p>Chegamos no últimooo!! Nesse ponto, todo o seu sistema já está pronto pra baixar filmes automaticamente legendados em português. Agora, só falta o principal: assistir. Essa é a função do Plex.</p>
+<p>Após instalar o Plex, acesse-o através de http://localhost:32400 ou http://(seu_ip):32400 ou app ponto plex ponto tv.</p>
+<p><strong>Adicione o Server</strong></p>
+<p><a class="glightbox" href="https://telegra.ph/file/a96d91d4442aba216eeb0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://telegra.ph/file/a96d91d4442aba216eeb0.png" /></a></p>
+<p><strong>Marque</strong> permita-me acessar minha mídia remotamente</p>
+<p><strong>Adicione as bibliotecas</strong></p>
+<p>Você vai abrir uma biblioteca para Filmes, adicionando a pasta Filmes.</p>
+<p>Depois, você vai abrir outra biblioteca para Séries, adicionando a pasta <strong>Séries.</strong></p>
+<p><strong>Pronto.</strong></p>
+<p><a class="glightbox" href="https://telegra.ph/file/1a19ead3f9a859b1bcfaa.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://telegra.ph/file/1a19ead3f9a859b1bcfaa.png" /></a></p>
+<p>Agora, algumas configurações adicionais ao Plex. Clique na <strong>Chave de Fenda</strong> no canto superior direito.</p>
+<p><strong>Configurações =&gt; Biblioteca</strong></p>
+<ul>
+<li>
+<p><strong>Habilite</strong> Digitalizar minha biblioteca automaticamente</p>
+</li>
+<li>
+<p><strong>Habilite</strong> Execute uma varredura parcial quando forem detectadas alterações</p>
+</li>
+<li>
+<p><strong>Desabilite</strong> Escaneie minha biblioteca periodicamente</p>
+</li>
+<li>
+<p><strong>Habilite</strong> Esvaziar lixeira automaticamente após cada varredura</p>
+</li>
+<li>
+<p><strong>Desabilite</strong> Permitir exclusão de mídia</p>
+</li>
+<li>
+<p><strong>Habilite</strong> Executar tarefas de varredura em uma prioridade mais baixa</p>
+</li>
+</ul>
+<h3 id="gerenciar-bibliotecas-de-midia">Gerenciar =&gt; Bibliotecas de mídia</h3>
+<blockquote>
+<p>Clique em <strong>Editar Biblioteca</strong> da pasta <strong>Filmes</strong>, depois, <strong>Avançado</strong></p>
+</blockquote>
+<ul>
+<li>
+<p><strong>Varredura</strong> - Plex Movie</p>
+</li>
+<li>
+<p><strong>Agente - Plex Movie</strong></p>
+</li>
+<li>
+<p><strong>Habilitar</strong> Usar recursos locais</p>
+</li>
+<li>
+<p><strong>Desabilitar</strong> Metadados Locais preferidos</p>
+</li>
+<li>
+<p>Tamanho mínimo da coleção automática - 2</p>
+</li>
+<li>
+<p><strong>Coleções - Hide collections but show their ite</strong></p>
+</li>
+</ul>
+<blockquote>
+<p>Clique em <strong>Editar Biblioteca</strong> da pasta <strong>Séries</strong>, depois, <strong>Avançado</strong></p>
+</blockquote>
+<ul>
+<li>
+<p><strong>Varredura - Plex TV Series</strong></p>
+</li>
+<li>
+<p><strong>Agente - Plex TV Series</strong></p>
+</li>
+<li>
+<p><strong>Ordem dos Episodios - The Movie Database</strong></p>
+</li>
+<li>
+<p><strong>Habilitar</strong> Usar títulos da temporada</p>
+</li>
+<li>
+<p><strong>Habilitar</strong> Usar recursos locais</p>
+</li>
+<li>
+<p><strong>Desabilitar</strong> Metadados Locais preferidos</p>
+</li>
+<li>
+<p><strong>Coleções - Hide Collections but show their items</strong></p>
+</li>
+</ul>
+<h2 id="conclusao">CONCLUSÃO</h2>
+<p>Guia finalizado, espero que, se seguiram direitinho, tenham conseguido automatizar e tornar a vida de pirataria de vocês muito mais fácil. Eu aprendi muito disso aqui testando por conta própria, mas também muito do que está aqui veio do site <a href="https://trash-guides.info">trash guides</a>, onde eles ensinam bastante sobre os programas Arr, podem ir conferir lá caso tenha surgido alguma dúvida, ou me perguntar também. Muito obrigado a quem leu tudo, deu muito trabalho.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://reddit.com/r/pirataria" target="_blank" rel="noopener" title="reddit.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 256C0 114.6 114.6 0 256 0s256 114.6 256 256-114.6 256-256 256H37.1c-13.7 0-20.5-16.5-10.9-26.2L75 437C28.7 390.7 0 326.7 0 256zm349.6-102.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7c-20.6 0-37.8 14.6-41.8 34-34.5 3.7-61.4 33-61.4 68.4v.2c-37.5 1.6-71.8 12.3-99 29.1-10.1-7.8-22.8-12.5-36.5-12.5-33 0-59.8 26.8-59.8 59.8 0 24 14.1 44.6 34.4 54.1 2 69.4 77.6 125.2 170.6 125.2s168.7-55.9 170.6-125.3c20.2-9.6 34.1-30.2 34.1-54 0-33-26.8-59.8-59.8-59.8-13.7 0-26.3 4.6-36.4 12.4-27.4-17-62.1-27.7-100-29.1v-.2c0-25.4 18.9-46.5 43.4-49.9 4.4 18.8 21.3 32.8 41.5 32.8zm-172.5 93.3c16.7 0 29.5 17.6 28.5 39.3s-13.5 29.6-30.3 29.6-31.4-8.8-30.4-30.5S160.3 247 177 247zm190.1 38.3c1 21.7-13.7 30.5-30.4 30.5s-29.3-7.9-30.3-29.6c-1-21.7 11.8-39.3 28.5-39.3s31.2 16.6 32.1 38.3zm-48.1 56.7c-10.3 24.6-34.6 41.9-63 41.9s-52.7-17.3-63-41.9c-1.2-2.9.8-6.2 3.9-6.5 18.4-1.9 38.3-2.9 59.1-2.9s40.7 1 59.1 2.9c3.1.3 5.1 3.6 3.9 6.5z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/c-pirataria" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.top", "toc.follow", "toc.integrate", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
