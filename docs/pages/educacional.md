@@ -128,11 +128,15 @@ A educação é o processo de adquirir conhecimento, habilidades e valores funda
 
 ### 🐐 [Polemic Knowledge](https://t.me/PolemicKnowledge)
 
-- Frequentemente eles deixam aberto de madrugada para entrar, sempre tente acessar esse link por volta da madrugada.
+- Frequentemente eles deixam aberto de madrugada para entrar, sempre tente acessar esse link por volta da madrugada. 
 
 ### 🔗 [Polemic Hub](https://t.me/polemic)
 
 - Apenas um backup e "Hub" para outros canais do Polemic.
+
+### 🔗 [Search bot](@en_SearchBot)
+
+- Bot para realizar uma busca aprimorada de cursos no Telegram.
 
 ### 🔗 [Brasil Cursos🇧🇷](https://t.me/Brasil_Cursos_Novo)
 
