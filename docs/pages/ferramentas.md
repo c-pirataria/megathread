@@ -140,7 +140,7 @@ Para clientes de torrent Android, consulte: [Mobile](mobile)
 
 ## ► **Segurança**
 
-O Windows Defender deve ser mais do que suficiente para proteção contra vírus, combinado com [malwarebytes](https://www.malwarebytes.com/) como uma precaução extra. Você não precisa de antivírus pagos, nem é recomendável piratear nenhum antivírus pago.
+O Windows Defender deve ser mais do que suficiente para proteção contra vírus, combinado com [malwarebytes](https://www.malwarebytes.com/) ou [bitdefender](https://www.bitdefender.com/solutions/free.html?clickid=VlsxoQ2ibxyKW%3AjUaWU1tWcHUkHXL-UTR2rZQs0&irgwc=1&MPid=30557&cid=aff%7Cc%7CIR) como uma precaução extra. Você não precisa de antivírus pagos, nem é recomendável piratear nenhum antivírus pago.
 
 - [av-comparatives.org](https://www.av-comparatives.org/) - Testes de proteção antivírus
 - [VirusTotal.com](https://www.virustotal.com/) - serviço da Web que verifica arquivos e URLs com vários mecanismos antivírus
