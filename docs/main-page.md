@@ -4,7 +4,7 @@
 - Esta Megathread tem como objetivo capturar a essência da renomada [Megathread](https://rentry.co/megathread) do [c/Piracy](https://lemmy.dbzer0.com/c/piracy) (antigo r/piracy), atuando como uma valiosa fonte para explorar uma ampla gama de recursos excepcionais com uma seleção abrangente de opções nacionais.
 :::
 
-:::tip ⌛ Marinheiro não tão rápido! Faça isso primeiro:
+:::tip ⌛ Marinheiro não tão rápido! Faça isso primeiro
 - Use no celular ou computador o [Firefox](https://mozilla.org/firefox/new/) + [uBlock Origin](https://addons.mozilla.org/firefox/addon/ublock-origin/) com essas [configurações otimizadas](https://take-me-to.space/UShoGZ7.png)(*Bloqueia anúncios e malware*).
 - Altere suas configurações de DNS para uma dessas [ótimas opções](https://www.privacyguides.org/en/dns/) (*Ignora as limitações de acesso ao sites bloqueados pela operadora*).
 - Use um cliente de torrent respeitável com um kill switch, como [qBittorrent](https://www.qbittorrent.org/) (*Permite torrenting*).
