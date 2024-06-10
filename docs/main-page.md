@@ -5,11 +5,7 @@
 :::
 
 :::tip ⌛ Marinheiro não tão rápido! Faça isso primeiro:
-
-Para bloquear anúncios e malware
-
-- Use [Firefox](https://mozilla.org/firefox/new/) + [uBlock Origin](https://addons.mozilla.org/firefox/addon/ublock-origin/) com essas [configurações otimizadas](https://take-me-to.space/UShoGZ7.png)
-- No mobile utilize o [Kiwi browser](https://kiwibrowser.com/) + [tab block](https://chromewebstore.google.com/detail/tabblock/ljmkpdhploeaohmnljbbkohmmfkikklj) + o próprio adblock do navegador.
+- Use no celular ou computador o [Firefox](https://mozilla.org/firefox/new/) + [uBlock Origin](https://addons.mozilla.org/firefox/addon/ublock-origin/) com essas [configurações otimizadas](https://take-me-to.space/UShoGZ7.png)(Bloqueia anúncios e malware).
 - Altere suas configurações de DNS para uma dessas [ótimas opções](https://www.privacyguides.org/en/dns/) (*Ignora as limitações de acesso ao sites bloqueados pela operadora*).
 - Use um cliente de torrent respeitável com um kill switch, como [qBittorrent](https://www.qbittorrent.org/) (*Permite torrenting*).
 - **(Opcional)** Configure uma VPN como [ProtonVPN (suporta port-forwarding, P2P)](https://protonvpn.com/), [AirVPN (suporta port-forwarding, P2P)](https://airvpn.org), [IVPN](https://www.ivpn.net/) ou [Mullvad](https://mullvad.net/) (*Altera o endereço IP para ocultar a identidade*).
