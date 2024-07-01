@@ -231,7 +231,10 @@ Mobile, ou smartphones, são dispositivos portáteis que integram a funcionalida
 - Especializado em modificações de aplicativos e jogos premium de várias fontes.
 - [Resultados de segurança da URL](https://www.urlvoid.com/scan/modyolo.com/)
 
-### 🔗 [PDALIFE](https://pdalife.com/)
+- ### 🌟 [cricmodapk](https://cricfytvapkpro.com/)
+
+- Seu site preferido para modificações seguras e confiáveis ​​de aplicativos e jogos.
+- [Resultados de segurança da URL](https://www.urlvoid.com/scan/cricfytvapkpro.com/)
 
 - Alternativa às lojas de aplicativos tradicionais, oferecendo downloads gratuitos para aplicativos Android e iOS.
 - [Resultados de segurança da URL](https://www.urlvoid.com/scan/pdalife.com/)
